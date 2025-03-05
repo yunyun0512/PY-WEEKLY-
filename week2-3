@@ -1,0 +1,16 @@
+n, m = map(int, input().split())
+keys = list(map(str, input().split()))  # 姓名
+values = [0] * n
+dic_ = dict(zip(keys, values))
+lis1 = []
+for _ in range(m):
+    lis1.append(list(map(str, input().split())))  # 选第 i 门精品课的人
+for course in lis1:
+    for person in course:
+        if person in dic_:
+            dic_[person] += 1
+count=0
+for i in dic_.values():
+    if(i==0):
+        count+=1
+print(count)
