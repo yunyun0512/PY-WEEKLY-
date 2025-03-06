@@ -1,0 +1,10 @@
+n = int(input())
+dic = {}
+for i in range(n):
+    m = int(input())
+    for j in range(m):
+        a, b = input().split()
+        dic[a] = (int)b
+dic_=dict(sorted(dic.items(), key=lambda item: item[1],reverse=True))
+for i in dic_.keys():
+    print(f"{i} {dic_[i]}")
