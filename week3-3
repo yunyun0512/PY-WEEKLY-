@@ -1,0 +1,10 @@
+def my_sum(*args, value:int=1):
+    '''
+    Add Value To Numbers
+    '''
+    result = []
+    for i in args:
+        result.append(i + value)
+    return result
+
+print(my_sum(9, 9, 8, 2, 4, 4, value=10)) 
